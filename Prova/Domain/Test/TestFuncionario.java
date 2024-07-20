@@ -14,9 +14,9 @@ public class TestFuncionario {
             double salarioSemDesconto = scanner.nextDouble();
 
             double descontoINSS = CalcularDescontos.descontoDeInss(salarioSemDesconto);
-            double salarioBaseComImpRenda = salarioSemDesconto - descontoINSS;
-            double descontoImpRenda = CalcularDescontos.descontoImpRenda(salarioBaseComImpRenda);
-            double salarioLiquido = salarioBaseComImpRenda - descontoImpRenda;
+            double salarioBase = salarioSemDesconto - descontoINSS;
+            double descontoImpRenda = CalcularDescontos.descontoImpRenda(salarioBase);
+            double salarioLiquido = salarioBase - descontoImpRenda;
 
             System.out.println("Salário bruto: R$ " + salarioSemDesconto);
             System.out.println("Desconto INSS: R$ " + descontoINSS);
